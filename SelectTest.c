@@ -32,7 +32,7 @@ int main()
             if(FD_ISSET(lfd, &rset))
             {
                 int cfd = Accept(lfd, NULL, NULL);
-                printf("xinlj\n");
+                printf("New Client£¡\n");
                 FD_SET(cfd, &oldset);
                 if(cfd > maxfd)
                 {
@@ -57,7 +57,7 @@ int main()
                     }
                     else if(ret == 0)
                     {   
-                        printf("client close\n");
+                        printf("Client Close\n");
                         close(i);
                         FD_CLR(i, &oldset);
 
